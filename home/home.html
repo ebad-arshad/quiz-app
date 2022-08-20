@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Quiz App</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="loader">
+        <img id="loading" src="../images/Rolling-1s-200px.gif" alt="">
+    </div>
+    <nav class="hidden">
+        <div class="head_img">
+            <img width="100%" src="../images/logo.png" alt="">
+        </div>
+        <div class="log_out_btn">
+            <!-- <p>Log Out</p> -->
+            <button onclick="result_page()">Result</button>
+            <button onclick="logOut()">Log Out</button>
+        </div>
+    </nav>
+
+    <div class="main hidden">
+        <div class="heading"></div>
+        <div class="quizes_box">
+            <div class="python_quiz quiz_box">
+                <div class="name">Python</div>
+                <div class="subjects">1 Subjects</div>
+                <div class="join_btn">
+                    <button disabled onclick="joinQuiz('python','1','Python')">Join</button>
+                </div>
+            </div>
+            <div class="java_quiz quiz_box">
+                <div class="name">Java</div>
+                <div class="subjects">2 Subjects</div>
+                <div class="join_btn">
+                    <button disabled onclick="joinQuiz('java','2','Java')">Join</button>
+                </div>
+            </div>
+            <div class="c++_quiz quiz_box">
+                <div class="name">C++</div>
+                <div class="subjects">1 Subjects</div>
+                <div class="join_btn">
+                    <button disabled onclick="joinQuiz('c++','1','C++')">Join</button>
+                </div>
+            </div>
+            <div class="web_mobile_hybrid_quiz quiz_box">
+                <div class="name">Web and Mobile</div>
+                <div class="subjects">3 Subjects</div>
+                <div class="join_btn">
+                    <button onclick="joinQuiz('web_and_mobile','3','Web and Mobile')">Join</button>
+                </div>
+            </div>
+            <div class="flutter_quiz quiz_box">
+                <div class="name">Flutter</div>
+                <div class="subjects">3 Subjects</div>
+                <div class="join_btn">
+                    <button disabled onclick="joinQuiz('flutter','3','Flutter')">Join</button>
+                </div>
+            </div>
+            <div class="c_quiz quiz_box">
+                <div class="name">C</div>
+                <div class="subjects">1 Subjects</div>
+                <div class="join_btn">
+                    <button disabled onclick="joinQuiz('c','1')">Join</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="home.js"></script>
+
+</html>

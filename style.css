@@ -20,11 +20,6 @@
     display: none;
 }
 
-body {
-    background: #e9ecef;
-    overflow: hidden;
-}
-
 /* NavBar */
 
 nav {
@@ -55,8 +50,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 90px;
-    margin-bottom: 50px;
+    background: #e9ecef;
+    padding: 90px 0 50px 0;
+    text-align: center;
+    object-fit: contain;
 }
 
 .heading_1 {
@@ -113,7 +110,6 @@ nav {
 
 footer {
     background: white;
-    height: 100vh;
     display: flex;
     justify-content: center;
     padding: 50px 0;

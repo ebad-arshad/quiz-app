@@ -20,7 +20,7 @@ function showPass() {
 }
 
 function signUp() {
-    window.location.replace("../signup/signup.html")
+    window.location.pathname = `signup/signup.html`
 }
 
 function loginBtn() {
@@ -79,6 +79,7 @@ function loginBtn() {
         }
         if (flag === 2) {
             localStorage.setItem("window", "true")
+            localStorage.setItem("count", "1")
             window.close()
         }
     }

@@ -1,4 +1,8 @@
 window.onload = function () {
+    var gettingCount = localStorage.getItem("count")
+    if (gettingCount === "1") {
+        window.location.pathname = `home/home.html`
+    }
     setTimeout(function () {
         document.getElementsByClassName("loader")[0].style.height = "auto"
         document.getElementsByTagName("body")[0].children[0].children[0].classList.add("hidden");
@@ -16,7 +20,7 @@ function googleBtn() {
 window.onfocus = function () {
     var windowCheck = localStorage.getItem("window")
     if (windowCheck === "true") {
-        localStorage.setItem("window","false")
-        window.location.replace("home/home.html")
+        localStorage.setItem("window", "false")
+        window.location.pathname = `home/home.html`
     }
 }
