@@ -1,7 +1,7 @@
 window.onload = function () {
     var gettingCount = localStorage.getItem("count")
     if (gettingCount === "1") {
-        window.location.pathname = `home/home.html`
+        window.location.href = `home/home.html`
     }
     setTimeout(function () {
         document.getElementsByClassName("loader")[0].style.height = "auto"
@@ -21,6 +21,6 @@ window.onfocus = function () {
     var windowCheck = localStorage.getItem("window")
     if (windowCheck === "true") {
         localStorage.setItem("window", "false")
-        window.location.pathname = `home/home.html`
+        window.location.href = `home/home.html`
     }
 }

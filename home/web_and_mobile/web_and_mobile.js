@@ -1,10 +1,10 @@
 function logOut() {
     localStorage.setItem("count", "0")
-    window.location.pathname = `index.html`
+    window.location.href = `../../index.html`
 }
 
 function result_page() {
-    window.location.pathname = "../result/result.html";
+    window.location.href = "../../result/result.html";
 }
 
 var courseName = localStorage.getItem("coursename")
@@ -121,7 +121,7 @@ function input_selected() {
 window.onload = function () {
     var checkingCount = localStorage.getItem("count")
     if (checkingCount === "0") {
-        window.location.pathname = `index.html`
+        window.location.href = `../../index.html`
     }
     setTimeout(function () {
         document.getElementsByClassName("loader")[0].style.height = "auto"
@@ -158,7 +158,7 @@ function next_btn() {
 function continueBtn(quiz_name, index) {
 
     window.onblur = function () {
-        window.location.pathname = "../home/home.html"
+        window.location.href = "../home.html"
     }
 
     var timer_min = 29;
@@ -166,7 +166,7 @@ function continueBtn(quiz_name, index) {
     setInterval(function () {
         if (timer_min === 0 && timer_sec === 0) {
             localStorage.setItem("score", score);
-            window.location.pathname = "result/result.html";
+            window.location.href = "../../result/result.html";
             timer_sec = timer_sec + 1;
         } else if (timer_sec === 0) {
             timer_sec = 60;
@@ -219,6 +219,6 @@ function adding_score() {
 
 function result() {
     localStorage.setItem("score", score);
-    window.location.pathname = "result/result.html";
+    window.location.href = "../../result/result.html";
 }
 

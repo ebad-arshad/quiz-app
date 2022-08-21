@@ -1,9 +1,9 @@
 function logOut() {
     localStorage.setItem("count", "0")
-    window.location.pathname = `index.html`
+    window.location.href = `../index.html`
 }
 function result_page() {
-    window.location.pathname = "result/result.html";
+    window.location.href = "../result/result.html";
 }
 var name = localStorage.getItem("fname")
 document.getElementsByClassName("heading")[0].innerHTML = `Welcome, ${name}.`
@@ -12,12 +12,12 @@ function joinQuiz(link, sub, name) {
     localStorage.setItem("course", link)
     localStorage.setItem("subject", sub)
     localStorage.setItem("coursename", name)
-    window.location.pathname = `home/${link}/${link}.html`
+    window.location.href = `${link}/${link}.html`
 }
 window.onload = function () {
     var checkingCount = localStorage.getItem("count")
     if (checkingCount === "0") {
-        window.location.pathname = `index.html`
+        window.location.href = `../index.html`
     }
     setTimeout(function () {
         document.getElementsByClassName("loader")[0].style.height = "auto"

@@ -20,7 +20,7 @@ function showPass() {
 }
 
 function signUp() {
-    window.location.pathname = `signup/signup.html`
+    window.location.href = `../signup/signup.html`;
 }
 
 function loginBtn() {
