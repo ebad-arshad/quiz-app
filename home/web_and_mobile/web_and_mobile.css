@@ -8,7 +8,9 @@
     src: url(../../fonts/Josefin_Sans/static/JosefinSans-Light.ttf);
 }
 
-
+.quiz_start_box:fullscreen {
+    background-color: white !important;
+}
 
 * {
     font-family: Josefin;
@@ -111,12 +113,22 @@ th {
 
 /* Quiz Start */
 
+.hidden_box {
+    place-items: center;
+    height: inherit;
+    background: white;
+}
+
+body {
+    height: 100vh;
+}
+
 .quiz_start_box {
     border: 1px solid #dfdfdf;
     padding: 10px 10px;
     width: 75%;
+    background: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    margin: 100px auto 0 auto;
 }
 
 .question_count {

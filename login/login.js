@@ -1,4 +1,3 @@
-
 window.onload = function () {
     setTimeout(function () {
         document.getElementsByClassName("loader")[0].style.height = "auto"
@@ -57,7 +56,6 @@ function loginBtn() {
         var passwordVerify = localStorage.getItem("password")
         if (emailVerify === email) {
             flag = flag + 1;
-            console.log(flag);
         }
         else {
             document.getElementsByClassName("email_info")[0].children[3].classList.remove("hidden")
@@ -68,7 +66,6 @@ function loginBtn() {
         }
         if (passwordVerify === password) {
             flag = flag + 1;
-            console.log(flag);
         }
         else {
             document.getElementsByClassName("password_info")[0].children[3].classList.remove("hidden")
@@ -78,9 +75,10 @@ function loginBtn() {
             flag = flag--;
         }
         if (flag === 2) {
-            localStorage.setItem("window", "true")
-            localStorage.setItem("count", "1")
-            window.close()
+            localStorage.setItem("window", "true");
+            localStorage.setItem("screen_size", screen.availHeight);
+            localStorage.setItem("count", "1");
+            window.close();
         }
     }
 }

@@ -11,11 +11,10 @@ var courseName = localStorage.getItem("coursename")
 var subject = localStorage.getItem("subject")
 document.getElementsByClassName("heading")[0].innerHTML = `${courseName} (${subject} Subjects)`;
 
-
-
 // Real Quiz Work Start Now
 
 var quiz_obj = [
+    // HTML5 Quiz Object
     [
         {
             question: "What do you understand by HTML?",
@@ -96,19 +95,181 @@ var quiz_obj = [
             opt3: "Web Browser",
             opt4: "Interpreter",
             answer: "Web Browser",
-        }],
-    [
-        // CSS
+        }
     ],
+    // CCS3 Quiz Object
     [
-        // Javascript
+        {
+            question: "How can you created rounded corners using CSS3?",
+            opt1: "border[round]: 30px;",
+            opt2: "corner-effect: round;",
+            opt3: "border-radius: 30px;",
+            opt4: "alpha-effect: round-corner;",
+            answer: "border-radius: 30px;",
+        },
+        {
+            question: "How do you add shadow to elements in CSS3?",
+            opt1: "box-shadow: 10px 10px 5px grey;",
+            opt2: "shadow-right: 10px shadow-bottom: 10px;",
+            opt3: "shadow-color: grey;",
+            opt4: "alpha-effect[shadow]: 10px 10px 5px grey;",
+            answer: "box-shadow: 10px 10px 5px grey;",
+        },
+        {
+            question: "How to you modify a border image using CSS3?",
+            opt1: "border: url(image.png);",
+            opt2: "border-variable: image url(image.png);",
+            opt3: "border-image: url(border.png) 30 30 round;",
+            opt4: "None",
+            answer: "border-image: url(border.png) 30 30 round;",
+        },
+        {
+            question: "How to resize a background image using CSS3?",
+            opt1: "background-size: 80px 60px;",
+            opt2: "bg-dimensions: 80px 60px;",
+            opt3: "background-proportion: 80px 60px;",
+            opt4: "alpha-effect: bg-resize 80px 60px;",
+            answer: "background-size: 80px 60px;",
+        },
+        {
+            question: "How to add text shadow using CSS3?",
+            opt1: "font: shadowed 5px 5px 5px grey;",
+            opt2: "font-shadow: 5px 5px 5px grey;",
+            opt3: "text-shadow: 5px 5px 5px grey;",
+            opt4: "shadow: text 5px 5px 5px grey;",
+            answer: "text-shadow: 5px 5px 5px grey;",
+        },
+        {
+            question: "How to force a word wrap using CSS3?",
+            opt1: "word-wrap: break-word;",
+            opt2: "text-wrap: break-word;",
+            opt3: "text-wrap: force;",
+            opt4: "text-width: set;",
+            answer: "word-wrap: break-word;",
+        },
+        {
+            question: "Which of these are valid CSS3 transformation statements.",
+            opt1: "matrix()",
+            opt2: "modify()",
+            opt3: "skip()",
+            opt4: "simulate()",
+            answer: "matrix()",
+        },
+        {
+            question: "How to rotate objects using CSS3?",
+            opt1: "object-rotation: 30deg;",
+            opt2: "transform: rotate(30deg);",
+            opt3: "rotate-object: 30deg;",
+            opt4: "transform: rotate-30deg-clockwise;",
+            answer: "transform: rotate(30deg);",
+        },
+        {
+            question: "How to re-size/scale objects using CSS3?",
+            opt1: "transform: scale(2,4);",
+            opt2: "scale-object: 2,4;",
+            opt3: "scale: (2,4);",
+            opt4: "None",
+            answer: "transform: scale(2,4);",
+        },
+        {
+            question: "How to create transition effects using CSS3?",
+            opt1: "transition-duration: 2s; transition-effect: width;",
+            opt2: "alpha-effect: transition (width,2s);",
+            opt3: "None",
+            opt4: "transition: width 2s;",
+            answer: "transition: width 2s;",
+        },
+    ],
+    // Javascript Quiz Object
+    [
+        {
+            question: "Which of the following is a server-side Java Script object?",
+            opt1: "Function",
+            opt2: "File",
+            opt3: "FileUpload",
+            opt4: "Date",
+            answer: "File",
+        },
+        {
+            question: " Java script can be used for Storing the form's contents to a database file on the server",
+            opt1: "False",
+            opt2: "True",
+            opt3: "Niether",
+            opt4: "Only in Table Form",
+            answer: "False",
+        },
+        {
+            question: "To insert a JavaScript into an HTML page, which tag is used?",
+            opt1: "script=â€™javaâ€™",
+            opt2: "javascript",
+            opt3: "script",
+            opt4: "js",
+            answer: "script",
+        },
+        {
+            question: "Which of the below is used in Java script to insert special characters?",
+            opt1: "&",
+            opt2: "\\",
+            opt3: "-",
+            opt4: "%",
+            answer: "\\",
+        },
+        {
+            question: "How does Java Script store dates in objects of Date type?",
+            opt1: "The number of days since January 1st, 1900",
+            opt2: "The number of seconds since January 1st, 1970",
+            opt3: "The number of milliseconds since January 1st, 1970",
+            opt4: "The number of picoseconds since January 1st, 1970",
+            answer: "The number of milliseconds since January 1st, 1970",
+        },
+        {
+            question: "Which is the correct way to write a JavaScript array?",
+            opt1: "var txt = new Array(1:'arr',2:'kim',3:'jim')",
+            opt2: "var txt = new Array:1=(' arr ')2=('kim')3=('jim')",
+            opt3: "var txt = new Array('arr ','kim','jim')",
+            opt4: "var txt = new Array=' arr ','kim','jim'",
+            answer: "var txt = new Array('arr ','kim','jim')",
+        },
+        {
+            question: "Which of the following is correct to write â€œHello Worldâ€ on the web page?",
+            opt1: "System.out.println(â€œHello Worldâ€)",
+            opt2: "print(â€œHello Worldâ€)",
+            opt3: "document.write(â€œHello Worldâ€)",
+            opt4: "response.write(â€œHello Worldâ€)",
+            answer: "document.write(â€œHello Worldâ€)",
+        },
+        {
+            question: "Which of the following is the tainted property of a window object in Java Script?",
+            opt1: "Pathname",
+            opt2: "Protocol",
+            opt3: "Defaultstatus",
+            opt4: "Host",
+            answer: "Defaultstatus",
+        },
+        {
+            question: "Which attribute needs to be changed to make elements invisible?",
+            opt1: "visibilty",
+            opt2: "visible",
+            opt3: "invisibility",
+            opt4: "invisibile",
+            answer: "visibilty",
+        },
+        {
+            question: "Which of the following is used to capture all click events in a window?",
+            opt1: "window.captureEvents(Event.CLICK)",
+            opt2: "window.routeEvents(Event.CLICK );",
+            opt3: "window.handleEvents(Event.CLICK );",
+            opt4: "window.routeEvents(Event.CLICK );",
+            answer: "window.captureEvents(Event.CLICK)",
+        },
     ],
 ]
+var scoreList = [JSON.parse(localStorage.getItem("score"))[0], JSON.parse(localStorage.getItem("score"))[1], JSON.parse(localStorage.getItem("score"))[2]];
 var count = 1;
 score = 0;
 score_match = "";
 var selected_input_value = "";
-var index_number = "";
+var index_number = 0;
 function input_selected() {
     selected_input_value = document.getElementsByName("options");
     for (i = 0; i < 4; i++) {
@@ -155,15 +316,28 @@ function next_btn() {
     count = count + 1;
 }
 
+var screen_size = document.getElementsByClassName("hidden_box")[0];
+
+function screen_change() {
+    screen_size.requestFullscreen();
+}
+
+var original_screen_size = screen.availHeight;
+
 function continueBtn(quiz_name, index) {
-
+    document.getElementsByClassName("hidden_box")[0].style.display = "grid";
+    screen_change();
     window.onblur = function () {
-        window.location.href = "../home.html"
+        window.location.href = "../home.html";
     }
-
+    index_number = index;
     var timer_min = 29;
     var timer_sec = 60;
     setInterval(function () {
+        if (localStorage.getItem("sceen_size") == screen.availHeight) {
+            window.location.href = "../home.html";
+        }
+        ""
         if (timer_min === 0 && timer_sec === 0) {
             localStorage.setItem("score", score);
             window.location.href = "../../result/result.html";
@@ -175,7 +349,6 @@ function continueBtn(quiz_name, index) {
         timer_sec = timer_sec - 1;
         document.getElementsByClassName("timer")[0].innerHTML = timer_min + ":" + timer_sec;
     }, 1000)
-    index_number = index;
     document.getElementsByTagName("body")[0].children[1].classList.add("hidden")
     document.getElementsByTagName("body")[0].children[2].classList.add("hidden")
     document.getElementsByTagName("body")[0].children[3].classList.remove("hidden")
@@ -218,7 +391,9 @@ function adding_score() {
 }
 
 function result() {
-    localStorage.setItem("score", score);
+    scoreList.splice(index_number, 1, score);
+    localStorage.setItem("score", JSON.stringify(scoreList));
+    localStorage.setItem("index", index_number);
     window.location.href = "../../result/result.html";
 }
 

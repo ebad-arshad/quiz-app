@@ -45,7 +45,7 @@ function signUpBtn() {
         localStorage.setItem("lname", lName)
         localStorage.setItem("email", email)
         localStorage.setItem("password", password)
-        window.location.href = `../login/login.html`
+        window.location.replace("../login/login.html")
     }
 }
 
@@ -60,5 +60,5 @@ function showPass() {
 
 
 function loginInts() {
-    window.location.href = `../login/login.html`
+        window.location.replace("../login/login.html")
 }
