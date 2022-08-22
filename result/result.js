@@ -10,5 +10,8 @@ window.onload = function () {
     var checkingCount = localStorage.getItem("count");
     if (checkingCount === "0") {
         window.location.href = `../index.html`;
+    } else if (gettingCount == null) {
+        var gettingCount = localStorage.setItem("count", "0")
+        window.location.reload();
     }
 }

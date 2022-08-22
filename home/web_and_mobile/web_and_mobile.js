@@ -283,6 +283,9 @@ window.onload = function () {
     var checkingCount = localStorage.getItem("count")
     if (checkingCount === "0") {
         window.location.href = `../../index.html`
+    } else if (gettingCount == null) {
+        var gettingCount = localStorage.setItem("count", "0")
+        window.location.reload();
     }
     setTimeout(function () {
         document.getElementsByClassName("loader")[0].style.height = "auto"
@@ -334,7 +337,7 @@ function continueBtn(quiz_name, index) {
     var timer_min = 29;
     var timer_sec = 60;
     setInterval(function () {
-        if (localStorage.getItem("sceen_size") == screen.availHeight) {
+        if (localStorage.getItem("screen_size") === screen.availHeight) {
             window.location.href = "../home.html";
         }
         ""

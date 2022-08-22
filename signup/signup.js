@@ -45,6 +45,7 @@ function signUpBtn() {
         localStorage.setItem("lname", lName)
         localStorage.setItem("email", email)
         localStorage.setItem("password", password)
+        localStorage.setItem("score", JSON.stringify([0,0,0]))
         window.location.replace("../login/login.html")
     }
 }
