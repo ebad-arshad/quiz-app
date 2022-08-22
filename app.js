@@ -1,10 +1,9 @@
 window.onload = function () {
     var gettingCount = localStorage.getItem("count")
-    console.log(gettingCount);
     if (gettingCount === "1") {
         window.location.href = `home/home.html`
     } else if (gettingCount == null) {
-        var gettingCount = localStorage.setItem("count", "0")
+        localStorage.setItem("count", "0")
         window.location.reload();
     }
     setTimeout(function () {
